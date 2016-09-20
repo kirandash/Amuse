@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 # Elements
 # Forms
+# Header
 # Navigation
 	## Links
 	## Menus
@@ -504,6 +505,37 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.site-branding {
+	float: left;
+    width: 30%;
+    padding: 2rem;
+}
+
+.site-title {
+	font-weight: 700;
+	font-size: 35px;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.site-description {
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0;
+}
+
+.site-branding a {
+	text-decoration: none;
+}
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -536,30 +568,6 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-branding {
-	float: left;
-    width: 30%;
-    padding: 2rem;
-}
-
-.site-title {
-	font-weight: 700;
-	font-size: 35px;
-	font-size: 2.5em;
-	text-transform: uppercase;
-	margin: 0;
-}
-
-.site-description {
-	font-weight: 300;
-	font-size: 16px;
-	margin: 0;
-}
-
-.site-branding a {
-	text-decoration: none;
-}
-
 .main-navigation {
 	clear: both;
 	display: block;
