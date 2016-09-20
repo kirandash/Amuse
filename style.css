@@ -47,9 +47,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
+	font-size: 62.5%;
+	overflow-y: scroll;
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	font-size: 10px;
 }
 
 body {
@@ -267,8 +270,8 @@ select,
 textarea {
 	color: #fff;
 	font-family: 'Lato', sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 1.5;
 }
 
@@ -305,10 +308,10 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #2f383d;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -322,7 +325,7 @@ tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 1.5rem;
 }
 
 abbr,
@@ -333,7 +336,7 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #2f383d;
 	text-decoration: none;
 }
 
@@ -425,7 +428,7 @@ input[type="submit"] {
 	background: #21c2f8;
 	color: #fff;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 	line-height: 1;
 	padding: 1em 2em;
 	-webkit-appearance: button;
@@ -541,7 +544,8 @@ a:active {
 
 .site-title {
 	font-weight: 700;
-	font-size: 32px;
+	font-size: 35px;
+	font-size: 2.5em;
 	text-transform: uppercase;
 	margin: 0;
 }
