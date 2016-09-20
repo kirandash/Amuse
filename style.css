@@ -533,6 +533,29 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.site-branding {
+	float: left;
+    width: 30%;
+    padding: 2rem;
+}
+
+.site-title {
+	font-weight: 700;
+	font-size: 32px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.site-description {
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0;
+}
+
+.site-branding a {
+	text-decoration: none;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
