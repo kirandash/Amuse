@@ -104,6 +104,8 @@ add_action( 'widgets_init', 'amuse_widgets_init' );
 function amuse_scripts() {
 	wp_enqueue_style( 'amuse-style', get_stylesheet_uri() );
 	
+	wp_enqueue_style( 'amuse-layout-style', get_template_directory_uri() . '/layouts/content-sidebar.css' );
+	
 	wp_enqueue_style( 'amuse-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	
 	wp_enqueue_style( 'amuse-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css' );
