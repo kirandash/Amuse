@@ -25,7 +25,7 @@ function amuse_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1600,
-		'height'                 => 250,
+		'height'                 => 460,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'amuse_header_style',
 	) ) );

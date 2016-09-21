@@ -118,5 +118,28 @@ function amuse_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'amuse_categories' );
 }
+
+/**
+ * Social Menu
+ */
+function amuse_social_menu() {
+    if ( has_nav_menu( 'social' ) ) {
+	wp_nav_menu(
+		array(
+			'theme_location'  => 'social',
+			'container'       => 'div',
+			'container_id'    => 'menu-social',
+			'container_class' => 'menu-social',
+			'menu_id'         => 'menu-social-items',
+			'menu_class'      => 'menu-items',
+			'link_before'     => '<span class="screen-reader-text">',
+			'link_after'      => '</span>',
+			'depth'           => 1,
+			'fallback_cb'     => '',
+		)
+	);
+    }
+}
+
 add_action( 'edit_category', 'amuse_category_transient_flusher' );
 add_action( 'save_post',     'amuse_category_transient_flusher' );

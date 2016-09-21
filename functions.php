@@ -23,6 +23,13 @@ function amuse_setup() {
 	 * to change 'amuse' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'amuse', get_template_directory() . '/languages' );
+	
+	// Add theme support for custom logo
+	add_theme_support( 'custom-logo', array(
+			'height'		=> '110',
+			'width'			=> '310',
+			'flex-width'	=>  true
+	) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -45,6 +52,7 @@ function amuse_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'amuse' ),
+		'social' => esc_html__( 'Social Menu', 'sangeet' ),
 	) );
 
 	/*
@@ -97,6 +105,17 @@ function amuse_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'amuse_widgets_init' );
+
+/**
+ * Amuse custom logo
+ */
+function amuse_get_custom_logo() {
+	
+	if( function_exists('get_custom_logo') ){
+		return get_custom_logo();
+	}
+	
+}
 
 /**
  * Enqueue scripts and styles.

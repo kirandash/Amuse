@@ -359,7 +359,7 @@ html {
 }
 
 body {
-	background: #424b52; /* Fallback for when there is no custom background color defined. */
+	background: #000000; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -426,7 +426,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: none;
-	background: #21c2f8;
+	background: #fec516;
 	color: #fff;
 	font-size: 12px;
 	font-size: 1.2rem;
@@ -440,7 +440,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: #fff;
-	color: #21c2f8;
+	color: #fec516;
 }
 
 button:focus,
@@ -452,7 +452,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	background: #fff;
-	color: #21c2f8;
+	color: #fec516;
 }
 
 input[type="text"],
@@ -507,14 +507,18 @@ textarea {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.header-image img {
-	display: block;
-	margin: 0 auto;
+.site-header {
+	min-height: 450px;
+}
+
+.header-background-image {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 .site-branding {
-	float: left;
-    width: 30%;
+	text-align: center;
     padding: 2rem;
 }
 
@@ -542,7 +546,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #21c2f8;
+	color: #fec516;
 	text-decoration: none;
 }
 

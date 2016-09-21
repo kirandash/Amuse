@@ -23,23 +23,30 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amuse' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<?php if ( get_header_image() ) : ?>
-        <div class="header-image">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-            </a>
-        </div>
-        <?php endif; // End header image check. ?>
+	<?php if ( get_header_image() ) : 
+	echo '<header id="masthead" class="site-header header-background-image" role="banner" style="background-image: url('.get_header_image().');">';
+	else:
+	echo '<header id="masthead" class="site-header" role="banner">';
+	endif;
+	?>
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        	<?php $logoOutput = amuse_get_custom_logo(); if( !empty( $logoOutput ) ): ?>
+            <div class="site-logo">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo amuse_get_custom_logo(); ?></a>
+            </div>
+            <?php else: ?>
+            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
-			endif; ?>
+			endif; 
+			endif;
+			?>
 		</div><!-- .site-branding -->
+        
+        <?php amuse_social_menu(); ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amuse' ); ?></button>
